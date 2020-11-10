@@ -1,11 +1,7 @@
 const $ = new Env()
 const exec = require('child_process').execSync
 const fs = require('fs')
-const download = require("download");
 const smartReplace = require("./smartReplace");
-
-process.env.REMOTE_URL = 'https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js';
-
 !(async () => {
   if (!process.env.REMOTE_URL) {
     console.log(`远程链接不能为空！请检查配置`)
@@ -14,8 +10,6 @@ process.env.REMOTE_URL = 'https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.
   let script_text = null
   let Cookies = []
   await $.getScript(process.env.REMOTE_URL).then((script) => (script_text = script))
-  //await download(process.env.REMOTE_URL, "./", { filename: "temp.js" });
-  //let script_text = await fs.readFileSync("./temp.js", "utf8");
   if (!script_text) {
     console.log(`未取到脚本文本！请检查配置`)
     return
