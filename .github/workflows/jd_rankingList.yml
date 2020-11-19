@@ -6,7 +6,7 @@ name: 京东排行榜
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 0 * * * '
+    - cron: '5 16 * * * '
   watch:
     types: started
 
@@ -42,7 +42,8 @@ jobs:
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-RQ'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-WRX'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-GC'')"}],
-                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-WSR'')"}]
+                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-WSR'')"}],
+                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-LQY'')"}]
                                   ]'
         run: |
           node 'scripts/remote/runRemoteScripts.js'
