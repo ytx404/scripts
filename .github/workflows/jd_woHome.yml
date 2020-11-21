@@ -33,6 +33,7 @@ jobs:
             TG_BOT_TOKEN :  ${{secrets.TG_BOT_TOKEN}}
             TG_USER_ID :  ${{secrets.TG_USER_ID}}
             REMOTE_URL: https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js
+            CUSTOM_REPLACE : '[{key : /const printDetail.+/,value : "const printDetail = true"}]'
             MULT_CUSTOM_REPLACE: '[[{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-YTX'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-SR'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-LJ'')"}],
