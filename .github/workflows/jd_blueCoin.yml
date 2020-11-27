@@ -6,7 +6,7 @@ name: 京小超收蓝币京豆
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '0 16 * * *'
   watch:
     types: started
 
