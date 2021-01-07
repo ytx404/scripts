@@ -34,9 +34,8 @@ jobs:
             TG_USER_ID :  ${{secrets.TG_USER_ID}}  
             REMOTE_URL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
             CUSTOM_REPLACE : '[
-                              {key : "!$nobyda.isNode", value :"$nobyda.isNode"},
                               {key : /(var Key = )''.*?''/, value : `$1''${(Secrets.COOKIE.split(SPLITSTR)[index])}''`},
-                              {key : /console.log(`\${title}\n\${subtitle}\n\${message}`)/, value : "if (isNode) {\nlet remotenotify = require(''./sendNotify'');\n remotenotify.sendNotify(`${title}\\n${subtitle}\\n${message}`,'''')\n}"}
+                              {key : /if \(isQuanX\) \$notify.*`)/, value : "if (isNode) {\nlet remotenotify = require(''./sendNotify'');\n remotenotify.sendNotify(`${title}\\n${subtitle}\\n${message}`,'''')\n}"}
                               ]'
             MULT_CUSTOM_REPLACE: '[[{key : /var Name.+/, value : "var Name = ''【签到帐号】:  YTX-'' + DName +''\\n''"}],
                                    [{key : /var Name.+/, value : "var Name = ''【签到帐号】:  SR-'' + DName +''\\n''"}],
