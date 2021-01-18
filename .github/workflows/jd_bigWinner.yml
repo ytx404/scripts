@@ -27,7 +27,7 @@ jobs:
           npm install request
           npm install --save got
           npm install tough-cookie
-      - name: '京东大赢家'
+      - name: '京东炸年兽'
         env: 
             COOKIE: ${{secrets.JD_COOKIE}}
             TG_BOT_TOKEN :  ${{secrets.TG_BOT_TOKEN}}
