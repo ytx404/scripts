@@ -43,7 +43,8 @@ jobs:
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-WRX'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-GC'')"}],
                                    [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-WSR'')"}],
-                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-LQY'')"}]
+                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-LQY'')"}],
+                                   [{key : /const \$.+\(''(.+)''\);/,value : "const $ = new Env(''$1-LQ'')"}]
                                   ]'
         run: |
           node 'scripts/remote/runRemoteScripts.js'
